@@ -24,6 +24,7 @@
 */
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
+{text:"PLT",url:"^https://github.com/NiskuT/Civilization"},
 {text:"Related Pages",url:"pages.html"},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"}]}]}
