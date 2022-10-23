@@ -39,7 +39,7 @@ jobs:
         doxyfile-path: "./docs/Doxyfile" # default is ./Doxyfile
         # Working directory
         working-directory: "." # default is .
-        additional-packages: "dia libpng"
+        additional-packages: "dia libpng-dev"
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
