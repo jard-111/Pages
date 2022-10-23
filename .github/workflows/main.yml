@@ -24,22 +24,14 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
         
-    # - name: Doxygen to GH-pages
-    #   uses: jard-111/doxygen-action@1.0
-    #   with:
-    #     # Path to Doxyfile
-    #     doxyfile-path: "./docs/Doxyfile" # default is ./Doxyfile
-    #     # Working directory
-    #     working-directory: "." # default is .
-    
-    - name: Doxygen Action
-      uses: mattnotmitt/doxygen-action@1.9.4
+    - name: Doxygen to GH-pages
+      uses: jard-111/doxygen-action@1.0
       with:
         # Path to Doxyfile
         doxyfile-path: "./docs/Doxyfile" # default is ./Doxyfile
         # Working directory
         working-directory: "." # default is .
-        additional-packages: "dia libpng-dev"
+ 
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
