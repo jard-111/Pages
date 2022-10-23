@@ -25,7 +25,7 @@ jobs:
     - uses: actions/checkout@v2
         
     - name: Doxygen Action
-      uses: jard-111/doxygen-action@v1.0
+      uses: jard-111/doxygen-action@1.0
       with:
         # Path to Doxyfile
         doxyfile-path: "./docs/Doxyfile" # default is ./Doxyfile
