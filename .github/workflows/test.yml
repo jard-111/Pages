@@ -26,17 +26,6 @@ jobs:
     - run: echo "hello world !!"  
     - run: echo "toto"  
     - run: echo "tata"
-  job-3:
-    runs-on: ubuntu-latest
-    needs: job-1
-    steps:  
-    - name: Doxygen to GH-pages
-      uses: jard-111/doxygen-action@1.0
-      with:
-        # Path to Doxyfile
-        doxyfile-path: "./docs/Doxyfile" # default is ./Doxyfile
-        # Working directory
-        working-directory: "." # default is .
   job-4:
     runs-on: ubuntu-latest
     needs: job-3
