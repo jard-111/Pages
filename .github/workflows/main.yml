@@ -36,8 +36,8 @@ jobs:
       if: ${{ github.event_name == 'push' }}
       working-directory: ${{github.workspace}}
       run : |
-        mkdir -p html/test
-        cp -r src/html_file.html html/test/file.html
+        sudo mkdir -p html/test
+        sudo cp -r src/html_file.html html/test/file.html
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
