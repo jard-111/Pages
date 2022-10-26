@@ -36,7 +36,7 @@ jobs:
       if: ${{ github.event_name == 'push' }}
       working-directory: ${{github.workspace}}
       run : |
-        cp -r src/html_file html/code-coverage
+        cp -r src/html_file.html html/code-coverage
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
