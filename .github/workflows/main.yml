@@ -32,12 +32,11 @@ jobs:
         # Working directory
         working-directory: "." # default is .
  
-    - name: Copy To Branches Action
-      uses: planetoftheweb/copy-to-branches@v1
-      env:
-        branches: gh-pages
-        key: main
-        files: src/
+    - name: Add coverage to GH-pages
+      if: ${{ github.event_name == 'push' }}
+      working-directory: ${{github.workspace}}
+      run : |
+        cp -r src/html_file html/code-coverage
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
